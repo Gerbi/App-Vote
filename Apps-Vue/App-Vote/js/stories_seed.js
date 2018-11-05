@@ -22,12 +22,22 @@ window.Feed = (function() {
 		},
 		{
 			id: 3,
-			title: 'Samy',
+			title: 'Sandry',
 			text:
 				'snt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this th',
 			votes: 0,
 			postedAt: '32 mins ago',
 			storyImage: 'https://loremflickr.com/320/240?random=3',
+			url: '#'
+		},
+		{
+			id: 4,
+			title: 'Caroline',
+			text:
+				'snt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this th',
+			votes: 0,
+			postedAt: '12 mins ago',
+			storyImage: 'https://loremflickr.com/320/240?random=4',
 			url: '#'
 		}
 	];
