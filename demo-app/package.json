@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "uikit": "^3.0.0-rc.20",
     "vue": "^2.5.17"
   },
   "devDependencies": {
