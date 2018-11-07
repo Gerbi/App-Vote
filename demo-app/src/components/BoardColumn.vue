@@ -5,7 +5,7 @@
         <div class="card-body" @click="setActiveCol(col.id)"
             style="cursor:pointer">
             <h3 align="center">{{col.name}}</h3>
-            <Task v-for="task in col.tasks" :task="task" :key="task.id" />
+            <Task v-for="task in col.tasks" :task="task" :key="task.id" :colId="col.id" />
         </div>
     </div><br>
 </div>
@@ -25,7 +25,6 @@ export default {
     methods: {
         setActiveCol(colId){
             store.setActiveCol(colId)
-
         }
     }
 }
