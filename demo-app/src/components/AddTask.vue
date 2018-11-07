@@ -36,6 +36,7 @@ export default {
     methods: {
         saveTask(taskTitle){
             store.addTask(taskTitle);
+            this.title = ''
         }
     }
 }
