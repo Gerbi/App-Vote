@@ -6,11 +6,11 @@
             <h3 align="center">New {{getColTitle}}</h3><br> 
             <p align="center">
                 
-                <input class="form-control form-control-sm" type="text" placeholder="Add Task">
+                <input class="form-control form-control-sm" type="text" placeholder="Add Task" v-model="title" />
             </p>
         
         </div>
-            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary" @click="saveTask(title)">Save</button>
     </div>
 </div>
 </div>
@@ -22,9 +22,20 @@
 import {store} from '../store.js';
 export default {
     name: 'AddTask',
+    data(){
+        return {
+            title: ''
+        }
+
+    },
     computed: {
         getColTitle(){
            return store.getActiveColumn().name;
+        }
+    },
+    methods: {
+        saveTask(taskTitle){
+            store.addTask(taskTitle);
         }
     }
 }
