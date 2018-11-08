@@ -1,32 +1,42 @@
 <template>
-    <div class="card" style="border:none">
-        <div class="card-header">
-          <h4 align="center">Done</h4>
-          </div>
+    
+        
         <div class="card-body">
-            <ul class="nav flex-column">
-                <li class="list-group-item" v-for="todo in todos" :key="todo.id">{{todo.title}}
-                <button class="btn" @click="removeTodo(todo.id)">
-            <i class="fa fa-trash"></i>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" v-for="todo in todos" :key="todo.id">
+                    
+                <div class="row">
+                    <div class="col-auto mr-auto">
+                        {{todo.title}}
+                    </div>
+                    <div class="col-auto">
+                    <button class="btn" @click="removeTodo(todo.id)">
+            <i class="fa fa-trash "></i>
             </button>
+                    </div>
+                    
+                </div>
+                
             </li>
             </ul>
           
         </div>
-      </div>
+     
 </template>
 <script>
+import EventBus from '../EventBus.js'
     export default {
         name: 'FinishedTodo',
         props:{
             todos:{
                 type: Array,
+                required:true
 
             }
         },
         methods:{
             removeTodo(todoId){
-                this.$emit('delete-todo', {id: todoId})
+                EventBus.$emit('delete-todo', {id: todoId})
             }
         }
     }

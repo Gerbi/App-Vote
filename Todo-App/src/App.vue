@@ -7,9 +7,9 @@
           <h4 align="center">Todos</h4>
         </div>
         <div class="card-body">
-          <AddTodo @add-todo="addTodo"/>
+          <AddTodo/>
           <hr>
-          <TodoListView :todos="unFinishedTodos" @completed-todo="completedTodo"/>
+          <TodoListView :todos="unFinishedTodos"/>
           
         </div>
         <div class="card-footer">
@@ -23,7 +23,25 @@
       
     </div>
     <div class="col-md-7 col-sm-6">
-        <FinishedTodo :todos="finishedTodos" @delete-todo="deleteTodo"/>
+      <div class="card" style="border:none">
+        <div class="card-header">
+          <h4 align="center">Done</h4>
+          
+        </div>
+      <FinishedTodo :todos="finishedTodos"/>
+      <div class="card-footer">
+        <div class="row">
+                    <div class="col-auto mr-auto">
+                       <h4>Items</h4>
+                    </div>
+                    <div class="col-auto">
+                    <h4><span class="badge badge-success">{{finishedTodos.length}}</span></h4>
+                    </div>
+                    
+                </div>
+      </div>
+      </div>
+        
         
     </div>
   </div>
@@ -37,6 +55,7 @@ import TodoListView from './components/TodoListView.vue';
 import AddTodo from './components/AddTodo.vue';
 import FinishedTodo from './components/FinishedTodo.vue';
 import {todos} from './seed.js'
+import EventBus from './EventBus.js';
 export default {
   name: 'app',
   data(){
@@ -49,6 +68,11 @@ export default {
     TodoListView,
     AddTodo,
     FinishedTodo
+  },
+  created (){
+    EventBus.$on('add-todo', event =>this.addTodo(event));
+    EventBus.$on('completed-todo', event =>this.completedTodo(event));
+    EventBus.$on('delete-todo', event =>this.deleteTodo(event));
   },
   methods:{
     addTodo(event){

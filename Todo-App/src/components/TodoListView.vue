@@ -1,16 +1,17 @@
 <template>
-    <ul class="nav flex-column" style="border:none">
-            <li class="list-group-item" v-for="todo in todos" :key="todo.id" 
-            style="border:none; border-bottom:solid; padding:2px; ">
-              <div class="checkbox">
-                  <label>
-                <input type="checkbox" class="checkbox-custom"@click="finishedTodo(todo.id)"/>{{todo.title}}</label>
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item" v-for="todo in todos" :key="todo.id">
+              <div class="custom-control custom-checkbox">
+                  <label class="custom-control-label">
+                <input type="checkbox" class="custom-control-input" @click="finishedTodo(todo.id)"/>{{todo.title}}</label>
               </div>
+              
             </li>
             
           </ul>
 </template>
 <script>
+import EventBus from '../EventBus.js'
 export default {
     name: 'TodoListView',
     props:{
@@ -21,7 +22,7 @@ export default {
     },
     methods:{
         finishedTodo(todoId){
-            this.$emit('completed-todo',{id: todoId})
+            EventBus.$emit('completed-todo',{id: todoId})
         }
     }
 }
