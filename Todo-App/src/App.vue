@@ -7,11 +7,8 @@
           <h4 align="center">Todos</h4>
         </div>
         <div class="card-body">
-          <AddTodo/>
+          <AddTodo @add-todo="addTodo"/>
           <hr>
-          
-          <button class="btn btn-success" style="2px 5px">Mark all as done</button><br><br>
-
           <TodoListView :todos="todos"/>
           
 
@@ -54,6 +51,11 @@ export default {
     TodoListView,
     AddTodo,
     FinishedTodo
+  },
+  methods:{
+    addTodo(event){
+      this.todos.push(event);
+    }
   }
 }
 </script>
