@@ -12,7 +12,7 @@
           
           <button class="btn btn-success" style="2px 5px">Mark all as done</button><br><br>
 
-          <TodoListView/>
+          <TodoListView :todos="todos"/>
           
 
           <div class="card">
@@ -39,8 +39,16 @@
 import TodoListView from './components/TodoListView.vue';
 import AddTodo from './components/AddTodo.vue';
 import FinishedTodo from './components/FinishedTodo.vue';
+import {todos} from './seed.js'
 export default {
   name: 'app',
+  data(){
+    return {
+      todos: todos 
+    }
+    
+
+  },
   
   components: {
     TodoListView,
