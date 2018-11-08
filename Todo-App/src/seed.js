@@ -7,16 +7,16 @@ export const todos = [
     {
         id: '2',
         title: 'Learn Vue',
-        completed: false
+        completed: true
     },
     {
         id: '3',
         title: 'Learn Mysql',
-        completed: true
+        completed: false
     },
     {
         id: '4',
         title: 'Learn Laravel',
-        completed: true
+        completed: false
     }
 ];

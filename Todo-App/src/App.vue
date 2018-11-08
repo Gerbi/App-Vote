@@ -9,13 +9,13 @@
         <div class="card-body">
           <AddTodo @add-todo="addTodo"/>
           <hr>
-          <TodoListView :todos="todos"/>
+          <TodoListView :todos="unFinishedTodos" @completed-todo="completedTodo"/>
           
-
-          <div class="card">
-            <div class="card-body">Items LEft</div>
-          </div>
-  
+        </div>
+        <div class="card-footer">
+          <strong>
+            <span>{{unFinishedTodos.length}}</span> Items Left
+          </strong>
         </div>
       </div>
       <br>
@@ -23,7 +23,7 @@
       
     </div>
     <div class="col-md-7 col-sm-6">
-        <FinishedTodo/>
+        <FinishedTodo :todos="finishedTodos" @delete-todo="deleteTodo"/>
         
     </div>
   </div>
@@ -43,8 +43,6 @@ export default {
     return {
       todos: todos 
     }
-    
-
   },
   
   components: {
@@ -55,8 +53,26 @@ export default {
   methods:{
     addTodo(event){
       this.todos.push(event);
+    },
+    completedTodo(event){
+      const index = this.todos.findIndex(todo => todo.id === event.id);
+      this.todos[index].completed = true
+    },
+    deleteTodo(event){
+      const index = this.todos.findIndex(todo => todo.id === event.id);
+      this.todos.splice(index, 1);
     }
-  }
+  },
+  computed:{
+        finishedTodos(){
+          return this.todos.filter(todo => todo.completed === true)
+
+        },
+        unFinishedTodos(){
+          return this.todos.filter(todo => todo.completed === false)
+            
+        }
+    }
 }
 </script>
 
