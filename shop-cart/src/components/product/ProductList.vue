@@ -1,9 +1,7 @@
 <template>
     <div>
         <ProductListView/>
-
     </div>
-
 </template>
 
 <script>

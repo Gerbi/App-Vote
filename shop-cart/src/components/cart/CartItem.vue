@@ -1,5 +1,4 @@
 <template>
-<div>
     <tr>
         <td>Learn Node</td>
         <td><input type="number" class="form-control" min="1" style="width:100px" value="1" /> </td>
@@ -8,7 +7,7 @@
             <button class="btn btn-danger"> Remove</button>
         </td>
     </tr>
-</div>
+
 </template>
 
 <script>

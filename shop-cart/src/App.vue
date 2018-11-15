@@ -8,7 +8,6 @@
 				</div>
 				<div class="col-sm-5"><br>
 					<ProductList/>
-
 				</div>
 			</div>
 		</div>
