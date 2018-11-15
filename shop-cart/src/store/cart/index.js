@@ -7,6 +7,11 @@ const state = {
 const getters = {
     cartItems(state){
         return state.cartItems;
+    },
+    cartTotal(state){
+        return state.cartItems.reduce((acc, cartItem) => {
+            return cartItem.qty * cartItem.price + acc;
+        }, 0).toFixed(2);
     }
 };
 

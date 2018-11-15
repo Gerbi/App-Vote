@@ -45,6 +45,30 @@
       "price": 140.99,
       "qty": 1,
       "createdAt": 1542318180685
+    },
+    {
+      "id": "1542319147719",
+      "title": "The Dog Hoodie",
+      "description": "This is the best pet in the world",
+      "price": 19.99,
+      "qty": 1,
+      "createdAt": 1542319147884
+    },
+    {
+      "id": "1542319148887",
+      "title": "The Dog Hoodie",
+      "description": "This is the best pet in the world",
+      "price": 19.99,
+      "qty": 1,
+      "createdAt": 1542319149699
+    },
+    {
+      "id": "1542319151888",
+      "title": "The Janki",
+      "description": "The best dog bones of all time. Holy crap. Your ",
+      "price": 15.99,
+      "qty": 1,
+      "createdAt": 1542319151954
     }
   ]
 }
