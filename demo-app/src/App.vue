@@ -1,9 +1,8 @@
 <template>
-    <div id="app" class="container">
+    <div id="app" class="container" style="background-color:white">
         <Board/>
         <hr/>
         <AddTask/>
-        
         <br>
     </div>
 </template>
