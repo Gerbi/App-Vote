@@ -35,7 +35,7 @@
                        <h4>Items</h4>
                     </div>
                     <div class="col-auto">
-                    <h4><span class="badge badge-success">{{finishedTodos.length}}</span></h4>
+                    <h4><span class="badge badge-success">3</span></h4>
                     </div>
                     
                 </div>
@@ -54,15 +54,8 @@
 import TodoListView from './components/TodoListView.vue';
 import AddTodo from './components/AddTodo.vue';
 import FinishedTodo from './components/FinishedTodo.vue';
-import {todos} from './seed.js'
 export default {
   name: 'app',
-  data(){
-    return {
-      todos: todos 
-    }
-  },
-  
   components: {
     TodoListView,
     AddTodo,
@@ -84,10 +77,10 @@ export default {
   },
   computed:{
         finishedTodos(){
-          return this.todos.filter(todo => todo.completed === true)
+          return this.$store.getters.findTodos.filter(todo => todo.completed === true)
         },
         unFinishedTodos(){
-          return this.todos.filter(todo => todo.completed === false)
+          return this.$store.getters.findTodos.filter(todo => todo.completed === false)
             
         }
     }

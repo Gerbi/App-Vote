@@ -1,7 +1,13 @@
 import {todos} from './seed';
+
 const state = {todos: todos};
 
-const getters = {};
+const getters = {
+    findTodos(state){
+        return state.todos;
+
+    }
+};
 
 const mutations = {};
 
