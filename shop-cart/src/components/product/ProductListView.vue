@@ -1,21 +1,25 @@
 <template>
-<div>
     <div class="card product-card">
         <div class="card-header">
-            Sugher Microphone
+            {{product.title}}
         </div>
         <div class="card-body">
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <p class="text-primary"> $99 </p>
+            <p class="card-text">{{product.description}}</p>
+            <p class="text-primary">${{product.price}}</p>
             <button class="btn btn-primary">Add to Cart</button>
         </div>
     </div>
-</div>
 </template>
 
 <script>
     export default {
-        name: "ProductListView"
+        name: "ProductListView",
+        props:{
+            product:{
+                type:Object,
+                required:true
+            }
+        }
     }
 </script>
 
