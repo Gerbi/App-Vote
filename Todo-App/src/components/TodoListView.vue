@@ -22,7 +22,7 @@ export default {
     },
     methods:{
         finishedTodo(todoId){
-            
+            this.$store.dispatch('completeTodo', {id: todoId})
         }
     }
 }
