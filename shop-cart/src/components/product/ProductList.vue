@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import ProductListView from './ProductListView';
+    import ProductListView from './ProductListItem';
     import {mapGetters} from 'vuex';
     export default {
         name: "ProductList",

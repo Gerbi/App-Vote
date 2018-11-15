@@ -6,12 +6,13 @@
         </td>
         <td>${{cartItem.price}}</td>
         <td>
-            <button class="btn btn-danger"> Remove</button>
+            <button class="btn btn-danger" @click="removeItem(cartItem)"> Remove</button>
         </td>
     </tr>
 </template>
 
 <script>
+    import {mapActions} from 'vuex'
     export default {
         name: "CartItem",
         props:{
@@ -19,6 +20,9 @@
                 type: Object,
                 required: true
             }
+        },
+        methods:{
+            ...mapActions(['removeItem'])
         }
     }
 </script>

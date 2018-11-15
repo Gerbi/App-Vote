@@ -29,39 +29,22 @@
       "qty": 1
     },
     {
-      "id": "5",
+      "id": "u_607J0",
       "title": "The Dog me",
       "description": "ddt in the world",
       "price": 199.99,
       "qty": 12,
-      "createdAt": 1542257040119,
-      "id": "u_607J0"
+      "createdAt": 1542257040119
     }
   ],
   "cart": [
     {
-      "id": "6",
-      "title": "Amazon LED",
-      "description": "The best Amazon LED monitor for Developers! ",
-      "price": 1000.99,
+      "id": "1542318180445",
+      "title": "Amazon Kindle",
+      "description": "The best amazon kindle for e-book readers",
+      "price": 140.99,
       "qty": 1,
-      "createdAt": 1537782692346
-    },
-    {
-      "id": "1537783175220",
-      "title": "The Dog Hoodie",
-      "description": "This is the best pet in the world",
-      "price": 19.99,
-      "qty": 1,
-      "createdAt": 1537783175262
-    },
-    {
-      "id": "1537783180539",
-      "title": "The Janki",
-      "description": "The best dog bones of all time. Holy crap. Your ",
-      "price": 15.99,
-      "qty": 1,
-      "createdAt": 1537783180580
+      "createdAt": 1542318180685
     }
   ]
 }
