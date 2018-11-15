@@ -9,8 +9,16 @@ const getters = {
     }
 };
 
-const mutations = {};
+const mutations = {
+    ADD_TODO(state, payload){
+        state.todos.push(payload);
+    }
+};
 
-const actions = {};
+const actions = {
+    addTodo(context, payload){
+        context.commit('ADD_TODO', payload);
+    }
+};
 
 export {state, getters, mutations, actions};
