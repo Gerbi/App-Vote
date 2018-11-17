@@ -1,16 +1,17 @@
 <template>
   <div class="container"><br>
-    <BasicForm/>
+    <FormValidations/>
   </div>
 </template>
 
 <script>
-import BasicForm from './components/BasicForm'
-
+import BasicForm from './components/BasicForm.vue'
+import FormValidations from './components/FormValidations.vue'
 export default {
   name: 'app',
   components: {
-    BasicForm
+    BasicForm,
+      FormValidations
   }
 }
 </script>
