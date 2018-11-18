@@ -1,15 +1,17 @@
 <template>
   <div class="container"><br>
-    <BasicForm/>
+    <CustomValidations/>
   </div>
 </template>
 
 <script>
 import BasicForm from './components/BasicForm'
+import CustomValidations from "./components/CustomValidations";
 
 export default {
   name: 'app',
   components: {
+      CustomValidations,
     BasicForm
   }
 }
