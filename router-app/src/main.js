@@ -12,10 +12,12 @@ import UserPosts from './components/user/UserPosts.vue'
 // import Products from './components/Products.vue'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import ProductList from "./components/product/ProductList";
+import ProductForm from "./components/product/ProductForm";
 Vue.config.productionTip = false;
 
 //registrar vue-router
-Vue.use(VueRouter);
+Vue.use(VueRouter); //$router and route
 
 //definir las routas para la aplicacion
 const router = new VueRouter({
@@ -32,6 +34,14 @@ const router = new VueRouter({
             ]
             //definir child routes para usuario
 
+        },
+        {
+            path: '/products',
+            component: ProductList
+        },
+        {
+            path: '/products/new',
+            component: ProductForm
         }
 
 
